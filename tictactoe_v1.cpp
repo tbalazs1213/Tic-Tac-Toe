@@ -3,7 +3,7 @@ using namespace std;
 
 #define MERET 9
 
-void ClearScreen()
+void ClearScreen() //Torli a kepernyot
 {
   for(int i = 0; i < 10; i++)
   {
@@ -11,7 +11,7 @@ void ClearScreen()
   }
 }
 
-void Tablafeltoltes(char tabla[MERET][MERET])
+void Tablafeltoltes(char tabla[MERET][MERET]) //Feltolti a tablat ures elemekkel
 {
   for(int i = 0; i < MERET; i++)
   {
@@ -22,7 +22,7 @@ void Tablafeltoltes(char tabla[MERET][MERET])
   }
 }
 
-void TablaKiiras(char tabla[MERET][MERET])
+void TablaKiiras(char tabla[MERET][MERET]) //Kiirja a tablat a kepernyore
 {
   cout << endl << "Tabla:" << endl << endl << ' ';
   for(int i = 1; i < MERET + 1; i++)
@@ -41,7 +41,7 @@ void TablaKiiras(char tabla[MERET][MERET])
   }
 }
 
-int SorBekeres()
+int SorBekeres() //Bekeri a kovetkezo lepes sorat
 {
   int sor;
   do
@@ -52,7 +52,7 @@ int SorBekeres()
   return sor;
 }
 
-int OszlopBekeres()
+int OszlopBekeres() //Bekeri a kovetkezo lepes oszlopat
 {
  int oszlop;
  do
@@ -63,7 +63,7 @@ int OszlopBekeres()
   return oszlop;
 }
 
-void Jatekos(bool c, int lepesszamlalo)
+void Jatekos(bool c, int lepesszamlalo) //Aktualis jatekos kivalasztasa
 {
   cout << endl;
   if(c)
@@ -77,7 +77,7 @@ void Jatekos(bool c, int lepesszamlalo)
   cout << endl;
 }
 
-bool JatekVege(int sorbeker, int oszlopbeker, bool c, char tabla[MERET][MERET])
+bool JatekVege(int sorbeker, int oszlopbeker, bool c, char tabla[MERET][MERET]) //Figyeli, hogy fennall-e olyan eset, ami a jatek veget eredmenyezi
 {
   if(c == true)
   {
@@ -184,7 +184,7 @@ bool JatekVege(int sorbeker, int oszlopbeker, bool c, char tabla[MERET][MERET])
   return false;
 }
 
-int Kezdolap()
+int Kezdolap() //Jatek inditasa
 {
   int parancs;
   cout << "Kezdolap:" << endl << endl;
@@ -203,7 +203,7 @@ int Kezdolap()
   return parancs;
 }
 
-void UjJatek()
+void UjJatek() //Uj jatek kerese
 {
   bool c = true;
   int lepesszamlalo = 0;
